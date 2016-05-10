@@ -1,0 +1,257 @@
+# Site settings
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "zh-cn"
+title = "企业秀"
+theme = "hugo-agency-theme"
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) or
+	# most longer texts.
+	#
+	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+	name = "Shawn Chen"
+	description = "Programming Life"
+
+	# Since this template is static, the contact form uses www.formspree.io as a
+	# proxy. The form makes a POST request to their servers to send the actual
+	# email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+	email = "cxwshawn@gmail.com"
+
+    # Link custom assets relative to /statuc
+    custom_css = []
+    custom_js  = []
+
+
+	# Navigation
+	[params.navigation]
+		brand = "首页"
+		services = "服务"
+		portfolio = "作品秀"
+		about = "关于"
+		team = "团队"
+		contact = "联系我们"
+
+    # Add custom links. Those can be pre- and postpended to the default menu above.
+    # Use the weight attribute to order your custom links. Uncomment the example
+    # below and replace the values with your own.
+
+    # prepended links
+    #[[menu.prepend]]
+    #    url = "http://gohugo.io"
+    #    name = "Hugo"
+    #    weight = 10
+
+    # postpended links
+    [[menu.postpend]]
+        url = "http://localhost:8080/register.html"
+        name = "点击注册"
+        weight = 1
+
+
+	# Hero section
+	[params.hero]
+		# To change the background image of the hero, replace 'header-bg.jpg' in
+		# the 'static/img' folder.
+		title = "欢迎来到企业展平台!"
+		subtitle = "很高兴能够认识您"
+		buttonText = "查看更多～"
+
+
+	# Services section
+	[params.services]
+        enable = true
+		title = "服务"
+		subtitle = "我们能够提供哪些服务."
+
+        [[params.services.row]]
+
+            [[params.services.row.list]]
+                icon = "fa-shopping-cart"
+                title = "电子商务"
+                description = "提供最优秀的电子商务平台"
+
+            [[params.services.row.list]]
+                icon = "fa-laptop"
+                title = "响应式设计"
+                description = "提供最佳的响应式设计方案"
+
+            [[params.services.row.list]]
+                icon = "fa-lock"
+                title = "网站"
+                description = "提供最优质的网站开发"
+
+	# Portfolio section
+	[params.portfolio]
+        enable = true
+		# All projects defined in their own files. You can find example projects
+		# at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+		# at the root of this Hugo site.
+		# For more informtion take a look at the README.
+		title = "作品秀"
+		subtitle = "我们曾做过哪些作品."
+
+		[params.portfolio.modal]
+            client = "Client"
+            date = "Date"
+            category = "Category"
+            buttonText = "Close project"
+    # About section
+	[params.about]
+        enable = true
+		title = "关于"
+		subtitle = "公司介绍."
+		endpoint = "成为<br>我们<br>历程的一部分!"
+
+		# The events will be listed from the top to the bottom.
+		# All images are stored under 'static/img/about'.
+		# Replace them with your own.
+		[[params.about.events]]
+			img = "1.jpg"
+			date = "2009-2011"
+			title = "公司成立"
+			description = ""
+
+		[[params.about.events]]
+			img = "2.jpg"
+			date = "March 2011"
+			title = "第一款产品诞生"
+			description = ""
+
+		[[params.about.events]]
+			img = "3.jpg"
+			date = "December 2012"
+			title = "第一批客户"
+			description = ""
+
+		[[params.about.events]]
+			img = "4.jpg"
+			date = "July 2014"
+			title = "公司规模扩大到5000人"
+			description = ""
+	# Team section
+	[params.team]
+        enable = true
+		title = "我们的团队"
+		subtitle = "服务至上的团队精神."
+		description = ""
+
+		# All team member's pictures are stored under 'static/img/team'.
+		# Replace them with your own too.
+		[[params.team.members]]
+			img = "1.jpg"
+			name = "老王"
+			position = "Lead Designer"
+			social = [
+				["fa-twitter", "#"],
+				["fa-facebook", "#"],
+				["fa-linkedin", "#"]
+			]
+
+		[[params.team.members]]
+			img = "2.jpg"
+			name = "帕克"
+			position = "Lead Marketer"
+			social = [
+				["fa-twitter", "#"],
+				["fa-facebook", "#"],
+				["fa-linkedin", "#"]
+			]
+
+		[[params.team.members]]
+			img = "3.jpg"
+			name = "皮特森"
+			position = "Lead Developer"
+			social = [
+				["fa-twitter", "#"],
+				["fa-facebook", "#"],
+				["fa-linkedin", "#"]
+			]
+
+	# Client section
+    [params.clients_list]
+        enable = true
+	title = "客户介绍"
+    	# All the clients' logos are stored under 'static/img/logos'.
+    	# Replace them with your clients's logos.
+    	[[params.clients]]
+    		logo = "envato.jpg"
+    		link = "#"
+
+    	[[params.clients]]
+    		logo = "designmodo.jpg"
+    		link = "#"
+
+    	[[params.clients]]
+    		logo = "themeforest.jpg"
+    		link = "#"
+
+    	[[params.clients]]
+    		logo = "creative-market.jpg"
+    		link = "#"
+
+
+	# Contact section
+	[params.contact]
+        enable = true
+		title = "联系我们"
+		subtitle  = ""
+		buttonText = "Send message"
+
+		# 'warning' defines error messages for invalid inputs
+		[params.contact.form.name]
+			text = "Your Name *"
+			warning = "Please enter your name."
+
+		[params.contact.form.email]
+			text = "Your Email *"
+			warning = "Please enter your email address."
+
+		[params.contact.form.phone]
+			text = "Your Phone *"
+			warning = "Please enter your phone number."
+
+		[params.contact.form.message]
+			text = "Your Message *"
+			warning = "Please enter a message."
+
+
+	# Footer section
+	[params.footer]
+        enable = true
+		copyright = "Published under the Apache License 2.0."
+
+		[[params.footer.social]]
+			icon = "fa-twitter"
+			link = "#"
+
+		[[params.footer.social]]
+			icon = "fa-facebook"
+			link = "#"
+
+		[[params.footer.social]]
+			icon = "fa-linkedin"
+			link = "#"
+
+		[[params.footer.quicklinks]]
+			text = "Privacy Policy"
+			link = "#"
+
+		[[params.footer.quicklinks]]
+			text = "Terms of Use"
+			link = "#"
